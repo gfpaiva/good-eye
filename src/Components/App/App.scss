@@ -1,0 +1,23 @@
+@import '../../Scss/root';
+
+.app {
+	&__section {
+		transition: background-color .5s ease;
+
+		&--intro {
+			background-color: $intro-color;
+		}
+
+		&--questions {
+			background-color: $questions-color;
+		}
+
+		&--result {
+			background-color: $result-color;
+		}
+
+		&--summary {
+			background-color: $summary-color;
+		}
+	}
+}

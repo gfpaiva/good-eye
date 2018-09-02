@@ -6,6 +6,10 @@ import Questions from '../Questions/Questions';
 import Result from '../../Pages/Result/Result';
 import Summary from '../../Pages/Summary/Summary';
 
+import categoryStep from '../../Utils/categoryStep';
+
+import './App.scss';
+
 class App extends Component {
 	state = {
 		step: 0,
@@ -37,17 +41,19 @@ class App extends Component {
 		const { step, transition, answers } = this.state;
 
 		return (
-			<div className="app container">
-				<Header />
+			<div className={`app app__section app__section--${categoryStep(step)}`}>
+				<div className="container">
+					<Header />
 
-				<section className="app__content">
-					{step === 0 && <Welcome {...{transition}} action={this.goToStep} />}
-					{step === 1 && <Instructions {...{transition}} action={this.goToStep} />}
-					{step === 2 && <Questions {...{transition}} action={this.goToStep} />}
-					{step === 3 && <Result {...{answers, transition}} action={this.goToStep} />}
-					{step === 4 && <Questions {...{transition}} action={this.goToStep} showAnswers={true} />}
-					{step === 5 && <Summary />}
-				</section>
+					<section className="app__content">
+						{step === 0 && <Welcome {...{transition}} action={this.goToStep} />}
+						{step === 1 && <Instructions {...{transition}} action={this.goToStep} />}
+						{step === 2 && <Questions {...{transition}} action={this.goToStep} />}
+						{step === 3 && <Result {...{answers, transition}} action={this.goToStep} />}
+						{step === 4 && <Questions {...{transition}} action={this.goToStep} showAnswers={true} />}
+						{step === 5 && <Summary />}
+					</section>
+				</div>
 			</div>
 		);
 	}

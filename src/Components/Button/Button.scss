@@ -5,9 +5,10 @@
 	color: $primary-color;
 	cursor: pointer;
 	display: inline-block;
+	font-size: 1rem;
 	outline: none;
 	padding: 0;
-	text-decoration: none;
+	text-decoration: underline;
 	text-transform: uppercase;
 
 	&--spaced { margin-left: 3em }

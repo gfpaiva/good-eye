@@ -7,7 +7,7 @@ const Instructions = ({ action, transition }) => (
 	<Steps
 		name="instructions"
 		title="Blue is for if you think the sentence is right, red is for if there is something wrong."
-		footer={<Button onClick={action}>Got It</Button>}
+		footer={<Button type="link" onClick={action}>Got It</Button>}
 		{...{transition}}
 	/>
 );

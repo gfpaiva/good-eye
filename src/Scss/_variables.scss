@@ -1,9 +1,17 @@
 $primary-color: #000!default;
-$secondary-color: #fbe28b!default;
+$secondary-color: #fff!default;
+
 $correct-color: #3288ec!default;
 $incorrect-color: #ee1c2e!default;
 $incorrect-secondary-color: #d0021b!default;
-$text-color: #444!default;
+
+$intro-color: #fbe28b!default;
+$questions-color: #def6ca!default;
+$result-color: #ffbbee!default;
+$summary-color: #bdb5dd!default;
+
 $container: 1170px!default;
 $textContainer: 945px!default;
+
 $fontFamily: "Helvetica Neue", sans-serif!default;
+$text-color: $primary-color!default;

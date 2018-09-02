@@ -14,7 +14,7 @@ const SingleSummary = ({name, description, link}) => (
 			title={name}
 			target="_blank"
 		>
-			Read more about her
+			Read more
 		</Button>
 	</article>
 );
