@@ -1,6 +1,6 @@
 {
-  "name": "cquest",
-  "version": "0.1.0",
+  "name": "good-eye",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
