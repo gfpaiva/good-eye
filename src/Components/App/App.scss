@@ -4,20 +4,10 @@
 	&__section {
 		transition: background-color .5s ease;
 
-		&--intro {
-			background-color: $intro-color;
-		}
-
-		&--questions {
-			background-color: $questions-color;
-		}
-
-		&--result {
-			background-color: $result-color;
-		}
-
-		&--summary {
-			background-color: $summary-color;
-		}
+		&--welcome { background-color: $welcome-color }
+		&--instructions { background-color: $instructions-color }
+		&--questions { background-color: $questions-color }
+		&--result { background-color: $result-color }
+		&--summary { background-color: $summary-color }
 	}
 }

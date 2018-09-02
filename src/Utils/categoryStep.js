@@ -3,8 +3,11 @@ export default function(step) {
 
 	switch (step) {
 		case 0:
+			category = 'welcome'
+		break;
+
 		case 1:
-			category = 'intro'
+			category = 'instructions'
 		break;
 
 		case 2:
