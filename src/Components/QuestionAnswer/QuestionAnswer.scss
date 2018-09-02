@@ -2,21 +2,6 @@
 
 .question__answer {
 	&-btn {
-		background-color: $primary-color;
-		border-radius: 50%;
-		border: none;
-		cursor: pointer;
-		font-size: 0;
-		height: 50px;
-		outline: none;
-		position: relative;
-		width: 50px;
-
-		@media screen and (max-width: 767px) {
-			width: 65px;
-			height: 65px;
-		}
-
 		&--incorrect {
 			background-color: $incorrect-color;
 			margin-right: .5rem;

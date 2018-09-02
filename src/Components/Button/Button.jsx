@@ -6,7 +6,7 @@ const Button = ({children, className, type, spaced, ...rest}) => {
 	if(type === 'link') {
 		return (
 			<a
-				className={`btn${spaced ? ' btn--spaced' : ''}${className ? ` ${className}` : ''}`}
+				className={`btn btn-link${spaced ? ' btn--spaced' : ''}${className ? ` ${className}` : ''}`}
 				{...rest}
 			>
 				{children}
@@ -16,7 +16,7 @@ const Button = ({children, className, type, spaced, ...rest}) => {
 
 	return (
 		<button
-			className={`btn${className ? ` ${className}` : ''}`}
+			className={`btn btn-button${spaced ? ' btn--spaced' : ''}${className ? ` ${className}` : ''}`}
 			type={type}
 			{...rest}
 		>
