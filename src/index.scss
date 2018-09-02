@@ -1,0 +1,23 @@
+@import './Scss/root',
+		'./Scss/fonts',
+		'~normalize.css/normalize.css';
+
+
+html,
+body {
+	background-color: $secondary-color;
+	color: $primary-color;
+	font: normal normal 1em/1.5 $fontFamily;
+}
+
+*,
+:after,
+:before { box-sizing: border-box }
+
+.container {
+	// max-width: $container;
+	width: 80%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+

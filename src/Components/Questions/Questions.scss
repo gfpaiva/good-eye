@@ -1,0 +1,55 @@
+@import '../../Scss/root';
+
+@keyframes highLight {
+	0% {
+		color: inherit;
+	}
+	100% {
+		color: $incorrect-secondary-color;
+	}
+}
+
+@keyframes strongComeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes strongComeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.question {
+	&__title { transition: opacity .5s ease; }
+
+	&__transition {
+		&-out { opacity: 0; }
+
+		&-in {
+			opacity: 1;
+
+			&.question__answers-results {
+				em { animation: highLight .5s ease 1s forwards; }
+			}
+		}
+	}
+
+	&__answers-results-text {
+		@include responsive-font-size(1.5rem);
+		display: block;
+		margin-top: 2.5em;
+		opacity: 0;
+		transition: opacity .5s ease;
+
+		.question__transition-in & { animation: strongComeIn .5s ease 1.7s forwards }
+		.question__transition-out & { animation: strongComeOut .5s ease forwards }
+	}
+}

@@ -1,0 +1,41 @@
+@keyframes blinkUp {
+	0%, 6%, 100% {
+		opacity: 0
+	}
+	1%, 5% {
+		opacity: 1
+	}
+}
+
+@keyframes blinkDown {
+	0%, 6%, 100% {
+		opacity: 1
+	}
+	1%, 5% {
+		opacity: 0
+	}
+}
+
+.header {
+	padding-bottom: 30px;
+
+	&__logo {
+		position: relative;
+	}
+
+	&__image {
+		position: absolute;
+
+		&--closed {
+			animation: blinkUp 5s linear 1s infinite;
+			top: 6px;
+			left: 0;
+			opacity: 0;
+		}
+
+		&--open {
+			animation: blinkDown 5s linear 1s infinite;
+			opacity: 1;
+		}
+	}
+}

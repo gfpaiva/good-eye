@@ -1,0 +1,16 @@
+@import '../../Scss/root';
+
+.btn {
+	background-color: $secondary-color;
+	border: none;
+	color: $primary-color;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.875rem;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&--spaced { margin-left: 3em }
+}

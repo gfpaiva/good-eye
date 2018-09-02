@@ -1,0 +1,48 @@
+@import '../../Scss/root';
+
+@keyframes comeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.step {
+
+	&__container {
+		animation: comeIn .5s ease;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 150px);
+		justify-content: space-between;
+		opacity: 1;
+		transition: opacity .5s ease;
+	}
+
+	&__transition { opacity: 0;	}
+
+	&__title {
+		@include responsive-font-size(3rem);
+		width: 100%;
+		max-width: $textContainer;
+		margin-top: 2.7em;
+		line-height: 1em;
+
+		em { font-style: normal }
+	}
+
+	&__footer {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			align-items: flex-start;
+
+			.contacts { margin-top: 2rem; }
+		}
+	}
+}

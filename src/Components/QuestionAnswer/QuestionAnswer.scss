@@ -1,0 +1,27 @@
+@import '../../Scss/root';
+
+.question__answer {
+	&-btn {
+		background-color: $primary-color;
+		border-radius: 50%;
+		border: none;
+		cursor: pointer;
+		font-size: 0;
+		height: 35px;
+		outline: none;
+		position: relative;
+		width: 35px;
+
+		@media screen and (max-width: 767px) {
+			width: 50px;
+			height: 50px;
+		}
+
+		&--incorrect {
+			background-color: $incorrect-color;
+			margin-right: .5rem;
+		}
+
+		&--correct { background-color: $correct-color; }
+	}
+}

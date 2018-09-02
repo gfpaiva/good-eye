@@ -1,0 +1,16 @@
+@keyframes resultComeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.result {
+	&__text {
+		animation: resultComeIn .5s ease 1.5s forwards;
+		display: block;
+		opacity: 0;
+	}
+}
