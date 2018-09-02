@@ -18,7 +18,13 @@ const Summary = () => (
 			{summaryEN.map((item, idx) => <SingleSummary {...item} key={idx} />)}
 
 			<div className="summary__footer">
-				<Button>Share</Button>
+				<Button
+					type="link"
+					href="https://www.facebook.com/sharer/sharer.php?u=https%3A//compassionate-benz-47d885.netlify.com/"
+					target="_blank"
+				>
+					Share
+				</Button>
 				<Contacts />
 			</div>
 		</section>
