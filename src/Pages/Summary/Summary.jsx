@@ -20,7 +20,7 @@ const Summary = () => (
 			<div className="summary__footer">
 				<Button
 					type="link"
-					href="https://www.facebook.com/sharer/sharer.php?u=https%3A//compassionate-benz-47d885.netlify.com/"
+					href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//compassionate-benz-47d885.netlify.com/','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250');"
 					target="_blank"
 				>
 					Share
