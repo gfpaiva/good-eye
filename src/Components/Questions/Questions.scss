@@ -49,6 +49,10 @@
 		opacity: 0;
 		transition: opacity .5s ease;
 
+		@media screen and (max-width: 767px) {
+			margin-top: 1.5em;
+		}
+
 		.question__transition-in & { animation: strongComeIn .5s ease 1.7s forwards }
 		.question__transition-out & { animation: strongComeOut .5s ease forwards }
 	}

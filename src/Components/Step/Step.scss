@@ -19,6 +19,10 @@
 		justify-content: space-between;
 		opacity: 1;
 		transition: opacity .5s ease;
+
+		@media screen and (max-width: 767px) {
+			height: calc(100vh - 90px);
+		}
 	}
 
 	&__transition { opacity: 0;	}
@@ -29,6 +33,10 @@
 		max-width: $textContainer;
 		margin-top: 2.7em;
 		line-height: 1em;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 1.7em;
+		}
 
 		em { font-style: normal }
 	}
