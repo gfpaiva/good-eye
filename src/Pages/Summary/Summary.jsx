@@ -33,8 +33,10 @@ class Summary extends Component {
 	fbShare = e => {
 		e.preventDefault();
 
-		window.FB.ui({
+		window.FB && window.FB.ui({
 			method: 'share',
+			display: 'page',
+			mobile_iframe: true,
 			href: shareUrl,
 		}, function(response){});
 	};

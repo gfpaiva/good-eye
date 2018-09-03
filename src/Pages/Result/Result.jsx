@@ -20,7 +20,7 @@ class Result extends Component {
 		return (
 			<Steps
 				name="result"
-				title={`You got ${calculateAnswers(answers)} out of ${answers.length}. <span class="result__text">Here are your results.</span>`}
+				title={`You got ${calculateAnswers(answers)} out of ${answers.length}. <span class="result__text">Here are the results.</span>`}
 				{...{transition}}
 			/>
 		);
