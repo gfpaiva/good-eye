@@ -1,7 +1,7 @@
 export default [
-	'That would be Marta.',
-	'That would be Hedy Lamarr.',
-	'That would be Maria Esther.',
-	'That would be Margaret Hamilton.',
-	'That would be Stephanie Kwolek.'
+	'It was Marta.',
+	'It was Hedy Lamarr.',
+	"It's Maria Esther Bueno.",
+	'It was Margaret Hamilton.',
+	'It was Stephanie Kwolek.'
 ];

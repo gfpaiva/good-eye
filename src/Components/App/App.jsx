@@ -7,6 +7,7 @@ import Result from '../../Pages/Result/Result';
 import Summary from '../../Pages/Summary/Summary';
 
 import categoryStep from '../../Utils/categoryStep';
+import checkLanguage from '../../Utils/checkLanguage';
 
 import './App.scss';
 
@@ -15,7 +16,7 @@ class App extends Component {
 		step: 0,
 		transition: false,
 		answers: [],
-		english: true
+		english: checkLanguage()
 	};
 
 	goToStep = (e, answers, nextStep) => {
