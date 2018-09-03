@@ -1,5 +1,5 @@
 export default [
-	'Foi Marta.',
+	'É Marta.',
 	'Foi Hedy Lamarr.',
 	'É Maria Esther Bueno.',
 	'Foi Margaret Hamilton.',
