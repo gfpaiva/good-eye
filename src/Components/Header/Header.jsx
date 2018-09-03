@@ -7,8 +7,8 @@ import closed from './eye-closed.svg';
 const Header = () => (
 	<header className="header">
 		<div className="header__logo">
-			<img className="header__image header__image--open" src={open} alt="Good Eye" title="Good Eye" />
-			<img className="header__image header__image--closed" src={closed} alt="Good Eye" title="Good Eye" />
+			<img className="header__image header__image--open" src={open} alt="an eye for detail" title="an eye for detail" />
+			<img className="header__image header__image--closed" src={closed} alt="an eye for detail" title="an eye for detail" />
 		</div>
 	</header>
 );

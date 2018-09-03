@@ -35,7 +35,6 @@ class Summary extends Component {
 
 		window.FB && window.FB.ui({
 			method: 'share',
-			display: 'page',
 			mobile_iframe: true,
 			href: shareUrl,
 		}, function(response){});
