@@ -6,7 +6,7 @@ import keyListener from '../../Utils/keyListener';
 
 class Instructions extends Component {
 
-	onKeyPress =  keyListener.bind(this);
+	onKeyPress = keyListener.bind(this);
 
 	componentDidMount() {
 		window.addEventListener('keypress', this.onKeyPress, false);
@@ -17,13 +17,13 @@ class Instructions extends Component {
 	}
 
 	render() {
-		const { action, transition } = this.props;
+		const { action, transition, english } = this.props;
 
 		return (
 			<Steps
 				name="instructions"
-				title="Blue if the sentence is right, red if there is something wrong."
-				footer={<Button type="link" onClick={action}>Got It</Button>}
+				title={english ? "Blue if the sentence is right, red if there is something wrong." : "Azul se a frase estiver correta, vermelha se estiver errada." }
+				footer={<Button type="link" onClick={action}>{english ? 'Got It' : 'Entendi' }</Button>}
 				{...{transition}}
 			/>
 		);

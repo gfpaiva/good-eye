@@ -14,7 +14,8 @@ class App extends Component {
 	state = {
 		step: 0,
 		transition: false,
-		answers: []
+		answers: [],
+		english: true
 	};
 
 	goToStep = (e, answers, nextStep) => {
@@ -37,13 +38,19 @@ class App extends Component {
 		})
 	};
 
+	changeLanguage = e => {
+		e.preventDefault();
+
+		this.setState(prevState => ({ english: !prevState.english }));
+	}
+
 	componentWillMount() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	}
 
 	render() {
-		const { step, transition, answers } = this.state;
+		const { step, transition, answers, english } = this.state;
 
 		return (
 			<div className={`app app__section app__section--${categoryStep(step)}`}>
@@ -51,12 +58,12 @@ class App extends Component {
 					<Header />
 
 					<section className="app__content">
-						{step === 0 && <Welcome {...{transition}} action={this.goToStep} />}
-						{step === 1 && <Instructions {...{transition}} action={this.goToStep} />}
-						{step === 2 && <Questions {...{transition}} action={this.goToStep} />}
-						{step === 3 && <Result {...{answers, transition}} action={this.goToStep} />}
-						{step === 4 && <Questions {...{transition}} action={this.goToStep} showAnswers={true} />}
-						{step === 5 && <Summary />}
+						{step === 0 && <Welcome {...{transition, english}} action={this.goToStep} language={this.changeLanguage} />}
+						{step === 1 && <Instructions {...{transition, english}} action={this.goToStep} />}
+						{step === 2 && <Questions {...{transition, english}} action={this.goToStep} />}
+						{step === 3 && <Result {...{answers, transition, english}} action={this.goToStep} />}
+						{step === 4 && <Questions {...{transition, english}} action={this.goToStep} showAnswers={true} />}
+						{step === 5 && <Summary {...{english}} />}
 					</section>
 				</div>
 			</div>

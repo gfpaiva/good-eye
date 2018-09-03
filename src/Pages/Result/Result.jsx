@@ -15,12 +15,12 @@ class Result extends Component {
 	}
 
 	render() {
-		const { transition, answers } = this.props;
+		const { transition, answers, english } = this.props;
 
 		return (
 			<Steps
 				name="result"
-				title={`You got ${calculateAnswers(answers)} out of ${answers.length}. <span class="result__text">Here are the results.</span>`}
+				title={english ? `You got ${calculateAnswers(answers)} out of ${answers.length}. <span class="result__text">Here are the results.</span>` : `Você acertou ${calculateAnswers(answers)} de ${answers.length}. <span class="result__text">Aqui estão os resultados.</span>`}
 				{...{transition}}
 			/>
 		);

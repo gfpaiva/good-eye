@@ -4,7 +4,8 @@ import Contacts from '../../Components/Contacts/Contacts';
 import Steps from '../../Components/Step/Step';
 import SingleSummary from '../../Components/SingleSummary/SingleSummary';
 
-import summaryEN from '../../Utils/summary';
+import summaryEN from '../../Utils/EN/summary';
+import summaryPT from '../../Utils/PT/summary';
 
 import './Summary.scss';
 
@@ -54,15 +55,20 @@ class Summary extends Component {
 
 	render() {
 		const { share, copied } = this.state;
+		const { english } = this.props;
+		const renderSummary = english ? summaryEN : summaryPT;
 
 		return (
 			<Fragment>
 				<Steps
 					name="summary"
-					title="We need to have a more critical and constructive re-examination of facts – and you can help. <span class='summary__subtitle'>Things that we usually don't take a second look at might be a very important piece of history and have influence on our present.</span>"
+					title={
+						english ?
+						"We need to have a more critical and constructive re-examination of facts – and you can help. <span class='summary__subtitle'>Things that we usually don't take a second look at might be a very important piece of history and have influence on our present.</span>"
+						: "Precisamos fazer um reexame mais crítico e construtivo dos fatos – e você pode ajudar. <span class='summary__subtitle'>O que às vezes não olhamos a fundo pode ser uma parte muito importante da história e ter influência sobre o nosso presente.</span>" }
 				/>
 				<section className="summary__end">
-					{summaryEN.map((item, idx) => <SingleSummary {...item} key={idx} />)}
+					{renderSummary.map((item, idx) => <SingleSummary {...item} key={idx} {...{english}} />)}
 
 					<div className="summary__footer">
 						{!share &&
@@ -70,7 +76,7 @@ class Summary extends Component {
 								type="link"
 								onClick={() => this.setState({ share: true })}
 							>
-								Share
+								{english ? 'Share' : 'Compartilhar' }
 							</Button>
 						}
 
@@ -97,10 +103,10 @@ class Summary extends Component {
 										type="link"
 										onClick={this.copy}
 									>
-										Copy URL
+										{english ? 'Copy URL' : 'Copiar URL' }
 									</Button>
 								}
-								{copied && <Button type="link">Copied</Button>}
+								{copied && <Button type="link">{english ? 'Copied' : 'Copiado' }</Button>}
 							</div>
 						}
 						<Contacts />

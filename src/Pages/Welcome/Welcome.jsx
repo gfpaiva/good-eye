@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Button from '../../Components/Button/Button';
 import Steps from '../../Components/Step/Step';
 
@@ -6,7 +6,7 @@ import keyListener from '../../Utils/keyListener';
 
 class Welcome extends Component {
 
-	onKeyPress =  keyListener.bind(this);
+	onKeyPress = keyListener.bind(this);
 
 	componentDidMount() {
 		window.addEventListener('keypress', this.onKeyPress, false);
@@ -17,13 +17,18 @@ class Welcome extends Component {
 	}
 
 	render() {
-		const { action, transition } = this.props;
+		const { action, transition, english, language } = this.props;
 
 		return (
 			<Steps
 				name="welcome"
-				title="Do you have an eye for detail?"
-				footer={<Button type="link" onClick={action}>Start</Button>}
+				title={english ? "Do you have an eye for detail?" : 'Você presta atenção nos detalhes?' }
+				footer={
+					<Fragment>
+						<Button type="link" onClick={action}>{english ? 'Start' : 'Começar' }</Button>
+						<Button type="link" onClick={language}>{english ? 'PT' : 'EN'}</Button>
+					</Fragment>
+				}
 				{...{transition}}
 			/>
 		);

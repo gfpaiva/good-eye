@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import QuestionAnswer from '../QuestionAnswer/QuestionAnswer';
 import QuestionCounter from '../QuestionCounter/QuestionCounter';
 
-import questionsEN from '../../Utils/questions';
-import answersEN from '../../Utils/answers';
+import questionsEN from '../../Utils/EN/questions';
+import answersEN from '../../Utils/EN/answers';
+import questionsPT from '../../Utils/PT/questions';
+import answersPT from '../../Utils/PT/answers';
 
 import './Questions.scss';
 
@@ -12,11 +14,15 @@ let timer;
 
 class Questions extends Component {
 
-	state = {
-		current: 0,
-		total: questionsEN.length,
-		questions: questionsEN,
-		transition: 'in'
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			current: 0,
+			total: props.english ? questionsEN.length : questionsPT.length,
+			questions: props.english ? questionsEN : questionsPT,
+			transition: 'in'
+		}
 	}
 
 	answer = (e, option) => {
@@ -25,7 +31,7 @@ class Questions extends Component {
 		const newAnswers = answers.concat(option);
 		answers = newAnswers;
 
-		if(this.state.current === this.state.total -1) return this.props.action(null, answers);
+		if(this.state.current === this.state.total - 1) return this.props.action(null, answers);
 
 		this.setState(() => {
 			return { transition: 'out' };
@@ -51,19 +57,20 @@ class Questions extends Component {
 
 	render() {
 		const { current, questions, total, transition } = this.state;
-		const { showAnswers } = this.props;
+		const { showAnswers, english } = this.props;
+		const renderAnswers = english ? answersEN : answersPT;
 
 		return (
 			<article className={`step__container${this.props.transition ? ' step__transition' : ''}${showAnswers ? ' step__answers' : ''}`}>
 				<p className={`step__title question__title ${transition ? `question__transition-${transition}` : ''}${showAnswers ? ' question__answers-results' : ''}`}>
-					<span  dangerouslySetInnerHTML={{__html: questions[current]}}></span>
+					<span dangerouslySetInnerHTML={{__html: questions[current]}}></span>
 
 					{!showAnswers &&
 						<QuestionCounter {...{current, total}} />
 					}
 
 					{showAnswers &&
-						<span className="question__answers-results-text">{answersEN[current]}</span>
+						<span className="question__answers-results-text">{renderAnswers[current]}</span>
 					}
 				</p>
 
