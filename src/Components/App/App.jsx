@@ -37,6 +37,11 @@ class App extends Component {
 		})
 	};
 
+	componentWillMount() {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
+
 	render() {
 		const { step, transition, answers } = this.state;
 

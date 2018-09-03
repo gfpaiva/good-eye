@@ -8,6 +8,9 @@ import summaryEN from '../../Utils/summary';
 
 import './Summary.scss';
 
+const shareUrl = window.location.href;
+const shareMessage = 'Do you have an eye for detail?';
+
 class Summary extends Component {
 
 	state = {
@@ -27,10 +30,25 @@ class Summary extends Component {
 		});
 	};
 
+	fbShare = e => {
+		e.preventDefault();
+
+		window.FB.ui({
+			method: 'share',
+			href: shareUrl,
+		}, function(response){});
+	};
+
+	twShare = e => {
+		e.preventDefault();
+
+		window.open('http://twitter.com/share?url='+encodeURIComponent(shareUrl)+'&text='+encodeURIComponent(shareMessage), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+	}
+
 	componentDidMount() {
 		document.addEventListener('copy', e => {
 			e.preventDefault();
-			e.clipboardData && e.clipboardData.setData("text/plain", window.location.href);
+			e.clipboardData && e.clipboardData.setData("text/plain", shareUrl);
 		});
 	};
 
@@ -61,7 +79,7 @@ class Summary extends Component {
 							<Button
 									type="link"
 									spaced
-									href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//compassionate-benz-47d885.netlify.com/','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250');"
+									onClick={this.fbShare}
 								>
 									Facebook
 								</Button>
@@ -69,7 +87,7 @@ class Summary extends Component {
 								<Button
 									type="link"
 									spaced
-									href="javascript:window.open('https://twitter.com/home?status=Do%20you%20have%20an%20eye%20for%20detail?%20https%3A//compassionate-benz-47d885.netlify.com/','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250');"
+									onClick={this.twShare}
 								>
 									Twitter
 								</Button>
