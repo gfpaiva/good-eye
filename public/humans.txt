@@ -1,0 +1,15 @@
+/* TEAM */
+Agnes Pinhanelli
+Design
+agnespinhanelli@gmail.com
+Location: São Paulo, Brasil.
+
+Guilherme Fernandes de Paiva
+Development
+gf.paiva@yahoo.com.br
+Location: São Paulo, Brasil.
+
+/* SITE */
+Last update: 2018/09
+Standards: HTML5, CSS3
+Components: ReactJS
