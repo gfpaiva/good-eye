@@ -21,7 +21,14 @@ class Summary extends Component {
 	copy = e => {
 		e.preventDefault();
 
+		const copyFunc = e => {
+			e.preventDefault();
+			e.clipboardData && e.clipboardData.setData("text/plain", shareUrl);
+		};
+
+		document.addEventListener('copy', copyFunc, false);
 		document.execCommand('copy');
+		document.removeEventListener('copy', copyFunc, false);
 
 		this.setState(() => ({ copied: true }), () => {
 			window.setTimeout(() => {
@@ -44,13 +51,6 @@ class Summary extends Component {
 		e.preventDefault();
 		window.open(`http://twitter.com/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareMessage)}`, '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 	}
-
-	componentDidMount() {
-		document.addEventListener('copy', e => {
-			e.preventDefault();
-			e.clipboardData && e.clipboardData.setData("text/plain", shareUrl);
-		});
-	};
 
 	render() {
 		const { share, copied } = this.state;
