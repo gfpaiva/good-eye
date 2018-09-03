@@ -4,4 +4,4 @@ export default [
 	'<em>Guga</em> é o maior tenista brasileiro de todos os tempos. <em>Ele</em> tem 589 títulos e ganhou dezesseis torneios Grand Slam',
 	'<em>Frank</em> Hamilton liderou uma equipe responsável pelo desenvolvimento do software para Apollo e Skylab, na NASA.',
 	'O químico <em>Steven</em> Kwolek inventou a fibra super forte Kevlar, usada para fazer coletes à prova de balas.'
-];a
+];
