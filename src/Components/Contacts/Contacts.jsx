@@ -7,6 +7,7 @@ const Contacts = () => (
 			type="link"
 			href="https://www.linkedin.com/in/agnespinhanelli/"
 			target="_blank"
+			spaced
 		>
 			Design
 		</Button>
@@ -15,7 +16,6 @@ const Contacts = () => (
 			type="link"
 			href="https://www.linkedin.com/in/gfpaiva/"
 			target="_blank"
-			spaced
 		>
 			Development
 		</Button>

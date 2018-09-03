@@ -5,7 +5,7 @@ import Steps from '../../Components/Step/Step';
 const Welcome = ({ action, transition }) => (
 	<Steps
 		name="welcome"
-		title="You can pass the test if you have a good eye."
+		title="Do you have an eye for detail?"
 		footer={<Button type="link" onClick={action}>Start</Button>}
 		{...{transition}}
 	/>

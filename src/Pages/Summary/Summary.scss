@@ -41,4 +41,10 @@
 			.contacts { margin-top: 3rem; }
 		}
 	}
+
+	&__sharer {
+		@media screen and (max-width: 767px) {
+			.btn:last-child { margin-top: 1em }
+		}
+	}
 }
