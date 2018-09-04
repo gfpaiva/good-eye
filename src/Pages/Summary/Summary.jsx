@@ -64,8 +64,8 @@ class Summary extends Component {
 					name="summary"
 					title={
 						english ?
-						"We need to have a more critical and constructive re-examination of facts – and you can help. <span class='summary__subtitle'>Things that we usually don't take a second look at might be a very important piece of history and have influence on our present.</span>"
-						: "Precisamos fazer um reexame mais crítico e construtivo dos fatos – e você pode ajudar. <span class='summary__subtitle'>O que às vezes não olhamos a fundo pode ser uma parte muito importante da nossa história e ter influência no nosso presente.</span>" }
+						"Take a second look. <span class='summary__subtitle'>Sometimes we miss details that might be a very important piece of history and have an impact on our present.</span>"
+						: "Olhe novamente. <span class='summary__subtitle'>Não perca detalhes que podem ser importantes para nossa história e que influenciam nosso presente.</span>" }
 				/>
 				<section className="summary__end">
 					{renderSummary.map((item, idx) => <SingleSummary {...item} key={idx} {...{english}} />)}

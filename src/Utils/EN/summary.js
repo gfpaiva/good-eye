@@ -21,7 +21,7 @@ export default [
 	},
 	{
 		name: 'Stephanie Kwolek',
-		description: 'Stephanie Louise Kwolek was an American chemist of Polish heritage, whose career at the DuPont company spanned over 40 years. She is best known for inventing the first of a family of synthetic fibres of exceptional strength and stiffness: poly-paraphenylene terephthalamide—better known as Kevlar.',
+		description: 'Stephanie Louise Kwolek was an American chemist of Polish heritage, whose career at the DuPont company spanned over 40 years. She is best known for inventing the first of a family of synthetic fibers of exceptional strength and stiffness: poly-paraphenylene terephthalamide – better known as Kevlar.',
 		link: 'https://en.wikipedia.org/wiki/Stephanie_Kwolek',
 	},
 ]

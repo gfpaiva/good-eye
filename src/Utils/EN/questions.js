@@ -1,7 +1,7 @@
 export default [
-	'<em>Pelé</em> has won five times the title of best player in the world. <em>He</em> is the greatest scorer in the history of the Brazilian National Team.',
-	'<em>Mark</em> Lamarr invented a secret communications system for radio-controlled torpedoes. This was the basis for other technologies, from Wi-Fi to GPS.',
-	'<em>Guga</em> is the greatest Brazilian tennis player of all time. <em>He</em> has 589 titles and has won sixteen Grand Slam tournaments.',
-	'<em>Frank</em> Hamilton led a team credited with developing the software for Apollo and Skylab, at NASA.',
-	'The chemist <em>Steven</em> Kwolek invented the super-strong Kevlar fibre, used to make bulletproof vests.'
+	'<em>Pelé</em> has won the title of the best player in the world five times. <em>He</em> is the greatest scorer in the history of the Brazilian National Team.',
+	'<em>Mark</em> Lamarr invented a secret communication system for radio-controlled torpedoes. The system was the basis for other technologies, from Wi-Fi to GPS.',
+	'<em>Guga</em> is the greatest Brazilian tennis player of all time. <em>He</em> has won sixteen Grand Slam tournaments, along with other 589 titles.',
+	'<em>Frank</em> Hamilton lead the NASA team that developed the software for Apollo and Skylab.',
+	'The chemist <em>Steven</em> Kwolek invented the super-strong Kevlar fiber, used to make bulletproof vests.'
 ];
