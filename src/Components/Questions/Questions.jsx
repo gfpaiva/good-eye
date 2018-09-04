@@ -31,6 +31,11 @@ class Questions extends Component {
 		const newAnswers = answers.concat(option);
 		answers = newAnswers;
 
+		window.dataLayer && window.dataLayer.push({
+			'event': `questions_answer${this.state.current}`,
+			'answer': option
+		});
+
 		if(this.state.current === this.state.total - 1) return this.props.action(null, answers);
 
 		this.setState(() => {
