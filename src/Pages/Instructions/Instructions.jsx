@@ -22,7 +22,7 @@ class Instructions extends Component {
 		return (
 			<Steps
 				name="instructions"
-				title={english ? "Blue if it's correct, or red if it's not." : "Azul se a frase estiver correta, vermelha se estiver errada." }
+				title={english ? "Blue if it's correct, or red if it's not." : "Azul se a frase estiver correta, vermelho se estiver errada." }
 				footer={<Button type="link" onClick={action}>{english ? 'Got It' : 'Entendi' }</Button>}
 				{...{transition}}
 			/>
