@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+
 import Header from '../Header/Header';
 import Welcome from '../../Pages/Welcome/Welcome';
 import Instructions from '../../Pages/Instructions/Instructions';
@@ -60,6 +62,7 @@ class App extends Component {
 
 		return (
 			<div className={`app app__section app__section--${categoryStep(step)}`}>
+				<Helmet htmlAttributes={{ lang : english ? 'en' : 'pt-BR' }} />
 				<div className="container">
 					<Header />
 

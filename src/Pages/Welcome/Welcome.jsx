@@ -22,7 +22,7 @@ class Welcome extends Component {
 		return (
 			<Steps
 				name="welcome"
-				title={english ? "Do you have an eye for detail?" : 'Você presta atenção nos detalhes?' }
+				title={english ? "Do you have an eye for detail?" : 'Você consegue se atentar aos detalhes?' }
 				footer={
 					<Fragment>
 						<Button type="link" onClick={action}>{english ? 'Start' : 'Começar' }</Button>
