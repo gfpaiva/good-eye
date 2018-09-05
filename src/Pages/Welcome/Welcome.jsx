@@ -25,7 +25,7 @@ class Welcome extends Component {
 				title={english ? "Do you have an eye for detail?" : 'Você consegue se atentar aos detalhes?' }
 				footer={
 					<Fragment>
-						<Button type="link" onClick={action}>{english ? 'Start' : 'Começar' }</Button>
+						<Button type="link" onClick={action}>{english ? 'Start' : 'Iniciar' }</Button>
 						<Button type="link" onClick={language}>{english ? 'PT' : 'EN'}</Button>
 					</Fragment>
 				}

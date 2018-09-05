@@ -66,7 +66,7 @@ class App extends Component {
 				<div className="container">
 					<Header />
 
-					<section className="app__content">
+					<section className="app__content" role="main">
 						{step === 0 && <Welcome {...{transition, english}} action={this.goToStep} language={this.changeLanguage} />}
 						{step === 1 && <Instructions {...{transition, english}} action={this.goToStep} />}
 						{step === 2 && <Questions {...{transition, english}} action={this.goToStep} />}

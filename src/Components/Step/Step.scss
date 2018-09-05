@@ -23,7 +23,7 @@
 		@media screen and (max-width: 767px) {
 			height: calc((var(--vh, 1vh) * 100) - 90px);
 
-			&.summary { height: calc(100vh - (90px + 10vh)) }
+			&.summary { height: calc(100vh - (90px + 15vh)) }
 		}
 	}
 
