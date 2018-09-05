@@ -6,11 +6,11 @@
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
 	outline: none;
-	padding: .3em .5em;
+	padding: 0;
 	text-decoration: none;
-	text-transform: uppercase;
-	transition: background-color .25s ease, color .25s ease;
 
 	&--spaced { margin-right: 3em }
 
@@ -25,18 +25,6 @@
 	}
 
 	@media screen and (min-width: 768px) {
-		font-size: 0.875rem;
-
-		&:not(&-button):hover {
-			background-color: rgba(0, 0, 0, .8);
-			color: $secondary-color;
-		}
-	}
-
-	@media screen and (max-width: 767px) {
-		&:not(&-button) {
-			background-color: rgba(0, 0, 0, .8);
-			color: $secondary-color;
-		}
+		&:hover { text-decoration: underline; }
 	}
 }
